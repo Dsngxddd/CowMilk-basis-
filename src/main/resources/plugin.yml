@@ -1,0 +1,10 @@
+name: sutineki
+version: 1.0
+main: org.cengiz1.sutineki.SutInekAlmaPlugin
+api-version: 1.19
+author: DSNG
+commands:
+  sütinekial:
+    permission: sutineki.yumurtaal
+    description: Süt inek çağırmak için komut
+    usage: /sütinekial
