@@ -5,6 +5,10 @@ api-version: 1.19
 author: DSNG
 commands:
   sütinekial:
-    permission: sutineki.yumurtaal
+    permission: op
     description: Süt inek çağırmak için komut
     usage: /sütinekial
+  sütinekyemekal:
+    permission: op
+    description: Süt inek yemeği almasını sağlar
+    usage: /inekyemekal
