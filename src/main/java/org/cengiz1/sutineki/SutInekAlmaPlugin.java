@@ -45,10 +45,32 @@ public class SutInekAlmaPlugin extends JavaPlugin implements CommandExecutor, Li
             } else {
                 sender.sendMessage("Kullanım: /sütinekial <oyuncu ismi>");
             }
-            return true;
+            if (command.getName().equalsIgnoreCase("sütinekyemekal")) {
+                if (sender instanceof Player) {
+                    Player player = (Player) sender;
+                    giveCustomApple(player);
+                } else {
+                    sender.sendMessage("Bu komut sadece oyuncular tarafından kullanılabilir.");
+                }
+                return true;
+            }
+            return false;
         }
         return false;
     }
+
+    private void giveCustomApple(Player player) {
+        ItemStack customApple = new ItemStack(Material.APPLE);
+        ItemMeta appleMeta = customApple.getItemMeta();
+        appleMeta.setCustomModelData(10012); // Set custom model data
+        customApple.setItemMeta(appleMeta);
+
+        player.getInventory().addItem(customApple);
+
+        player.sendMessage("Süt ineği yemeği verildi.");
+    }
+
+
 
     private void giveCowEgg(Player player) {
         ItemStack cowEgg = new ItemStack(Material.COW_SPAWN_EGG);
