@@ -152,7 +152,7 @@ public class SutInekAlmaPlugin extends JavaPlugin implements CommandExecutor, Li
 
                 if (appleToRemove != null) {
                     if (new Random().nextBoolean()) {
-                        // Başarılı olunca
+                        // Başarılı
                         inventory.removeItem(appleToRemove);
 
                         ItemStack milkBucket = new ItemStack(Material.MILK_BUCKET);
@@ -189,7 +189,6 @@ public class SutInekAlmaPlugin extends JavaPlugin implements CommandExecutor, Li
             player.addPotionEffect(resistanceEffect, true); // true parametresi eklenmiştir
             player.addPotionEffect(strengthEffect, true); // true parametresi eklenmiştir
 
-            // Sadece bir kova kullanıldığında kovayı kaldır
 
             player.sendMessage("Süt İneği kovası içildi. Direnç ve Kuvvet efektleri verildi.");
         }
